@@ -12,11 +12,10 @@ module.exports = function umlPlugin(md, options) {
     var zippedCode = deflate.encode64(
       deflate.zip_deflate(
         unescape(encodeURIComponent(
-          '@start' + diagramName + '\n' + umlCode + '\n@end' + diagramName)),
+          '@startmindmap' + '\n' + umlCode + '\n@endmindmap')),
         9
       )
     );
-    console.log(server + '/' + imageFormat + '/' + zippedCode);
     return server + '/' + imageFormat + '/' + zippedCode;
   }
 
