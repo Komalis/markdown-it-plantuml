@@ -6,7 +6,7 @@ module.exports = function umlPlugin(md, options) {
 
   function generateSourceDefault(umlCode, pluginOptions) {
     var imageFormat = pluginOptions.imageFormat || 'svg';
-    var diagramName = pluginOptions.diagramName || 'uml';
+    var diagramName = pluginOptions.diagramName || 'mindmap';
     var server = pluginOptions.server || 'https://www.plantuml.com/plantuml';
     var deflate = require('./lib/deflate.js');
     var zippedCode = deflate.encode64(
