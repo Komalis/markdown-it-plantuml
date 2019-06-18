@@ -26,7 +26,7 @@ module.exports = function umlPlugin(md, options) {
       closeMarker = options.closeMarker || '@endmindmap',
       closeChar = closeMarker.charCodeAt(0),
       render = options.render || md.renderer.rules.image,
-      generateSource = options.generateSource || generateSourceDefault;
+      generateSource = generateSourceDefault;
 
   function uml(state, startLine, endLine, silent) {
     var nextLine, markup, params, token, i,
