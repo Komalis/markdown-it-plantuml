@@ -22,9 +22,9 @@ module.exports = function umlPlugin(md, options) {
 
   options = options || {};
 
-  var openMarker = options.openMarker || '@startuml',
+  var openMarker = options.openMarker || '@startuml' || '@startmindmap',
       openChar = openMarker.charCodeAt(0),
-      closeMarker = options.closeMarker || '@enduml',
+      closeMarker = options.closeMarker || '@enduml' || '@endmindmap',
       closeChar = closeMarker.charCodeAt(0),
       render = options.render || md.renderer.rules.image,
       generateSource = options.generateSource || generateSourceDefault;
