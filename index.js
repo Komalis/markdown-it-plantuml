@@ -16,7 +16,7 @@ module.exports = function umlPlugin(md, options) {
         9
       )
     );
-
+    console.log(server + '/' + imageFormat + '/' + zippedCode);
     return server + '/' + imageFormat + '/' + zippedCode;
   }
 
